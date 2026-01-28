@@ -16,5 +16,11 @@ class CalculadoraTest {
 
         //long esperado = (long)4000000000.00;
         //assertEquals(esperado,resultado);
+
+        assertThrows(
+                IllegalAccessException.class,
+                ()->Calculadora.calcular(4,5,"a"),
+                "no lanza la excepcion"
+        );
     }
 }
